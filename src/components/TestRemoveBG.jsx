@@ -10,7 +10,9 @@ const TestRemoveBG = () => {
     const file = e.target.files[0];
 
     const result = await removeBackground(file);
-    setRemovedBg(`data:image/jpeg;base64, ${result}`);
+    setRemovedBg({ result });
+    console.log({ result });
+    console.log(typeof result);
   };
   return (
     <section className="flex h-screen w-full py-10 justify-centerflex flex-col justify-evenly">
